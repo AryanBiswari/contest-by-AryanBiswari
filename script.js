@@ -22,6 +22,7 @@ const select = document.createElement('select');
 select.name = 'profession';
 
 // Create the options for the dropdown
+
 const developerOption = document.createElement('option');
 developerOption.value = 'developer';
 developerOption.textContent = 'Developer';
@@ -35,6 +36,7 @@ select.appendChild(adminOption);
 // Create the filter button
 const button = document.createElement('button');
 button.textContent = 'Filter';
+button.classList.add('btn-class');
 button.addEventListener('click', () => {
     // Get the selected value from the dropdown
     const selectedValue = select.value;
