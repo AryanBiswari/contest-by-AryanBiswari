@@ -22,6 +22,10 @@ const select = document.createElement('select');
 select.name = 'profession';
 
 // Create the options for the dropdown
+const professionOption = document.createElement('option');
+professionOption.value = 'profession';
+professionOption.textContent = 'Profession';
+select.appendChild(professionOption);
 
 const developerOption = document.createElement('option');
 developerOption.value = 'developer';
@@ -41,7 +45,7 @@ button.addEventListener('click', () => {
     // Get the selected value from the dropdown
     const selectedValue = select.value;
 
-    if (selectedValue) {
+    if (selectedValue && selectedValue !== "profession") {
         // Use the filter function to filter the cards by profession
         const filteredArray = updatedArray.filter((item) => item.profession === selectedValue);
 
