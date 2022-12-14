@@ -36,6 +36,11 @@ adminOption.value = 'admin';
 adminOption.textContent = 'Admin';
 select.appendChild(adminOption);
 
+const designerOption = document.createElement('option');
+designerOption.value = 'designer';
+designerOption.textContent = 'Designer';
+select.appendChild(designerOption);
+
 const button = document.createElement('button');
 button.textContent = 'Filter';
 button.classList.add('btn-class');
@@ -70,5 +75,5 @@ document.getElementById('dropdown-container').appendChild(select);
 document.getElementById('button-container').appendChild(button);
 
 
-const newObject = {id: 4, name: "jane", age: "21", profession: "designer"};
-updatedArray.push(newObject);
+const newObject = [{id: 4, name: "jane", age: "21", profession: "designer"}];
+updatedArray.push(...newObject);
